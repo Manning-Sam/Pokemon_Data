@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="blogCenter">
+    <div class="card" style="width: 10vw;">
+        <img src="{{ p.image }}" class="card-img-top" alt="post image">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.name }}</h5>
+          <p class="card-text">{{ p.description }}</p>
+          <h3>{{ p.price }}</h3> <button class="btn btn-primary">Add To Cart</button>
+        </div>
+      </div>
+</div>
+{% endblock content %}

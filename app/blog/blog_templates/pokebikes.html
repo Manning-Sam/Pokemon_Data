@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>This is a blog</h1>
+{% for b in bikes %}
+<div class="blogCenter">
+    <div class="card" style="width: 40vw;">
+      <div class="card-body">
+          <img src="{{ my_img }}" alt="post image">
+          <p class="card-text">{{ b }}</p>
+        </div>
+      </div>
+</div>
+{% endfor %}
+{% endblock content %}

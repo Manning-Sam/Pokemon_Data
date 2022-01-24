@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if pokemon != '' %}
+<div class="blogCenter">
+    <div class="card" style="width: 10vw;">
+        <img src="{{ pokemon['image'] }}" class="card-img-top" alt="post image">
+        <div class="card-body">
+          <h5 class="card-title">{{ pokemon['name'] }}</h5>
+          <ul>
+              {% for ability in pokemon['abilities'] %}
+              <li>{{ ability}} </li>
+              {% endfor %}
+
+            </ul>
+        </div>
+      </div>
+</div>
+{% else %}
+<h1></h1>
+{% endif %}            
+{% endblock content %}
